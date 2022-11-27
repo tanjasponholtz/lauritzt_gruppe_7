@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  
+       <h1>Udvikling af komponenter med design tokens</h1>
+       <p>
+Vi har i figma arbejdet med styling af vores komponenter som vi har defineret som variabler i vores css.
+Vi vil her demonstrere det visuelle udtryk for flere af vores komponenter, der let kan fjernes og tilføjes i forskellige scenarier.
+ 
+Vi har  arbejdet med nogle,  komponenter som søgebar og checkboxe , der ikke indgår i listeview og gallerview, men de kan også ses herunder.
+</p>
+ 
+<section id="intro">
+ 
+   <div>
+<h4>Søgebar</h4>
+ 
+   <form class="example" action="">
+   <input type="text" placeholder="Search.." name="search">
+   <button style="" type="submit"><i class="search"></i></button>
+   </form>
+</div>
+ 
+ 
+ 
+   <div>
+       <h4>
+           Checkboxe til filtrering
+       </h4>
+      
+       <label class="container">One
+           <input type="checkbox" checked="checked">
+ <span class="checkmark"></span>
+         </label>
+        
+         <label class="container">Two
+           <input type="checkbox">
+           <span class="checkmark"></span>
+         </label>
+        
+         <label class="container">Three
+           <input type="checkbox">
+           <span class="checkmark"></span>
+         </label>
+        
+         <label class="container">Four
+           <input type="checkbox">
+           <span class="checkmark"></span>
+         </label>
+       </div>
+ 
+ 
+ 
+       <div>
+           <h4>CTA-KNAP</h4>
+<button>Button</button>       
+</div>
+ 
+ 
+<div>
+   <h4>Knap med ikon</h4>
+<button class="iconbutton">Button <img src="/billeder/arrowright.png" alt=""></button>       
+</div>
+<br>
+</section>
+ 
+<h2>Eksempel på card i listeview</h2>
+<p>Her har vi med forskellige variabler defineret farver, padding, margin, textstyle og form på vores bannere der indikerer om der er tale om en Nyproduceret eller deluxe  vare, og om auktionen nærmere sig sin frist.
+</p>
+<p>I disse card ses også vores design af en CTA knap, som er stylet med hover og pressed effekt, også vha. variablet i css. </p>
+ 
+<section id="card">
+ 
+<header class="cardheader">
+ <div class="nyproduceret">
+       <h3 class="">NYPRODUCERET</h3>
+     </div>     
+<div>
+</header>
+ 
+<div class="cardgrid">
+<div class="produktbillede">
+     <img src="/billeder/sofa.png" alt="">
+   </div>
+ 
+   <div class="produktinfo">
+       <h2>Eilersen, CFM sofa med sort læder, 3 pers.</h2>
+       <p>
+           N. Eilersen. Tre-pers sofa, model CFM06, betrukket med kraftig sort læder, hynder med koldskum. Stel af børstet rustfrit stål.
+       </p>
+           <li> L.196 cm.</li>
+          <li>D. 86 cm.</li>
+          <li>H. 72 cm.</li>
+</p>
+<p>
+          Fremstår med alm. brugsspor.
+       </p>
+       <button>Mere Info</button>
+       <p class="varedetaljer"> <strong> Varenr:</strong> 6274215</p>
+       <p class="varedetaljer"> <strong> Showroom:</strong>  DK, Odense, Kratholmvej</p>
+   </div>
+ 
+   <div class="prisdetaljer">
+ 
+       <h4>Udløbstid </h4>
+       <p>18/11/2022 Kl. 17:44</p>
+ 
+       <h4>Vurdering </h4>
+       <p>DKK 1.400</p>
+ 
+ 
+       <h4>Næste bud </h4>
+       <p>DKK 600</p>
+ 
+       <h4>Køb nu pris</h4>
+       <p>DKK 1.300</p>
+ </div>
+ 
+</div>
+</section>
+ 
+ 
+ 
+<section id="card">
+ 
+   <header class="cardheader">
+          <div class="nyproduceret">
+           <h3 class="">NYPRODUCERET</h3>
+         </div>     
+   <div>
+   </header>
+  
+   <div class="cardgrid">
+   <div class="produktbillede">
+         <img src="/billeder/sofa.png" alt="">
+       </div>
+  
+       <div class="produktinfo">
+           <h2>Eilersen, CFM sofa med sort læder, 3 pers.</h2>
+           <p>
+               N. Eilersen. Tre-pers sofa, model CFM06, betrukket med kraftig sort læder, hynder med koldskum. Stel af børstet rustfrit stål.
+           </p>
+               <li> L.196 cm.</li>
+              <li>D. 86 cm.</li>
+              <li>H. 72 cm.</li>
+   </p>
+   <p>
+              Fremstår med alm. brugsspor.
+           </p>
+           <button>Mere Info</button>
+           <p class="varedetaljer"> <strong> Varenr:</strong> 6274215</p>
+           <p class="varedetaljer"> <strong> Showroom:</strong>  DK, Odense, Kratholmvej</p>
+       </div>
+  
+       <div class="prisdetaljer">
+  
+           <h4 class="alert">Udløbstid </h4>
+           <p>18/11/2022 Kl. 17:44</p>
+ <h4>Vurdering </h4>
+           <p>DKK 1.400</p>
+  
+  
+           <h4>Næste bud </h4>
+           <p>DKK 600</p>
+  
+           <h4>Køb nu pris</h4>
+           <p>DKK 1.300</p>
+  
+       </div>
+ 
+       <div class="deluxe">
+           <h3 class="">Deluxe</h3>
+         </div>
+  
+   </div>
+   </section>
+ 
+ 
+ 
+   <section id="card">
+ 
+       <header class="cardheader">
+              <div class="nyproduceret">
+               <h3 class="">NYPRODUCERET</h3>
+             </div>     
+ 
+            <div class="sidstechance">
+              
+               <h3 class="">Sidste chance</h3>
+ 
+             </div>
+       </header>
+      
+       <div class="cardgrid">
+       <div class="produktbillede">
+             <img src="/billeder/sofa.png" alt="">
+           </div>
+      
+           <div class="produktinfo">
+               <h2>Eilersen, CFM sofa med sort læder, 3 pers.</h2>
+               <p>
+                   N. Eilersen. Tre-pers sofa, model CFM06, betrukket med kraftig sort læder, hynder med koldskum. Stel af børstet rustfrit stål.
+  </p>
+                   <li> L.196 cm.</li>
+                  <li>D. 86 cm.</li>
+                  <li>H. 72 cm.</li>
+       </p>
+       <p>
+                  Fremstår med alm. brugsspor.
+               </p>
+               <button>Mere Info</button>
+               <p class="varedetaljer"> <strong> Varenr:</strong> 6274215</p>
+               <p class="varedetaljer"> <strong> Showroom:</strong>  DK, Odense, Kratholmvej</p>
+           </div>
+      
+           <div class="prisdetaljer">
+      
+               <h4 class="alert">Udløbstid </h4>
+               <p>18/11/2022 Kl. 17:44</p>
+      
+               <h4>Vurdering </h4>
+               <p>DKK 1.400</p>
+      
+      
+               <h4>Næste bud </h4>
+               <p>DKK 600</p>
+      
+               <h4>Køb nu pris</h4>
+               <p>DKK 1.300</p>
+      
+           </div>
+  
+           <div class="deluxe">
+               <h3 class="">Deluxe</h3>
+             </div>
+      
+       </div>
+       </section>
+ 
+ 
+ 
+       <h2>Herunder ses vores styling i galleriview.</h2>
+ 
+       <section class="cardgalleri">
+ 
+           <header class="gallericardheader">
+               <div class="nyproduceret">
+                <h3 class="">NYPRODUCERET</h3>
+              </div>     
+         
+        </header>
+ 
+ 
+ 
+        <div id="produktbillede">
+           <img src="/billeder/sofa.png" alt="">
+         </div>
+    
+         <div class="produktinfogalleri">
+             <h2>Eilersen, CFM sofa med sort læder, 3 pers.</h2>
+             <p>
+                 N. Eilersen. Tre-pers sofa, model CFM06, betrukket med kraftig sort læder, hynder med koldskum. Stel af børstet rustfrit stål.
+             </p>
+                 <li> L.196 cm.</li>
+                <li>D. 86 cm.</li>
+                <li>H. 72 cm.</li>
+     </p>
+     <p>
+                Fremstår med alm. brugsspor.
+             </p>
+            
+             <button>Mere Info</button>
+             </div>
+             <div class="prisdetaljergalleri">
+       <div>
+      
+               <h4 class="alert">Udløbstid </h4>
+               <p>18/11/2022 Kl. 17:44</p>
+           </div>
+ 
+           <div class="vurderinggalleri" >
+               <h4>Vurdering </h4>
+               <p>DKK 1.400</p>
+       </div>
+       <div >
+               <h4>Næste bud </h4>
+               <p>DKK 600</p>
+           </div>
+               </div>
+           </div>
+ 
+        
+ 
+       </section>
+   </section>
+ 
+ 
+ 
+  
+   <section class="cardgalleri">
+ 
+ 
+     
+  
+  
+ 
+       <header class="gallericardheader">
+           <div class="nyproduceret">
+            <h3 class="">NYPRODUCERET</h3>
+          </div>   
+         
+   
+    </header>
+ 
+ 
+ 
+ 
+    <div id="produktbillede">
+       <img src="/billeder/sofa.png" alt="">
+     </div>
+      <div class="produktinfogalleri">
+         <h2>Eilersen, CFM sofa med sort læder, 3 pers.</h2>
+         <p>
+             N. Eilersen. Tre-pers sofa, model CFM06, betrukket med kraftig sort læder, hynder med koldskum. Stel af børstet rustfrit stål.
+         </p>
+             <li> L.196 cm.</li>
+            <li>D. 86 cm.</li>
+            <li>H. 72 cm.</li>
+ </p>
+ <p>
+            Fremstår med alm. brugsspor.
+         </p>
+        
+         <button>Mere Info</button>
+ 
+         <br>
+         <br>
+         <div class="sidstechance">
+              
+           <h3 class="">Sidste chance</h3>
+ 
+         </div>
+ 
+     
+         </div>
+         <div class="prisdetaljergalleri">
+ 
+          
+   <div>
+  
+           <h4 class="alert">Udløbstid </h4>
+           <p>18/11/2022 Kl. 17:44</p>
+       </div>
+ 
+       <div class="vurderinggalleri" >
+           <h4>Vurdering </h4>
+           <p>DKK 1.400</p>
+   </div>
+   <div >
+           <h4>Næste bud </h4>
+           <p>DKK 600</p>
+       </div>
+           </div>
+       </div>
+ 
+   </section>
+ 
+   <div class="deluxegalleri">
+       <h3 class="">Deluxe</h3>
+     </div>
+</section>
+</body>
+</html>

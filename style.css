@@ -1,0 +1,432 @@
+:root {
+  --body-margin: 15em;
+  --font-size-body: 1em;
+  --font-size-captions: 12px;
+  --font-size-buttons: 1.2em;
+  --font-size-heading: 2em;
+  --font-family-heading: "Roboto Condensed", bold, sans-serif;
+  --font-family-paragraph: "Lora", serif;
+  --color-background-banner: #93bbc0;
+  --color-text-color: #ffffff;
+  --color-secondary: #f9f5ef;
+
+  --width-button: 8em;
+  --height-button: 2em;
+  --color-background-button-pressed: #eadfcb;
+  --color-background-button-hover: #615750;
+  --color-background-button-primary: #897b6f;
+  --color-background-body: #faf9f6;
+  --banner-text-color: #ffffff;
+  --banner-new-color: #897b6f;
+  --banner-deluxe-color: #93bbc0;
+  --alert-color: #d91616;
+  --banner-width: 221px;
+  --banner-height: 24px;
+  --banner-shape: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+  --banner-deluxe-angle: rotate(45deg);
+  --banner-deluxe-margin-top: -5em;
+  --banner-deluxegalleri-margin-top: -2.7em;
+  --banner-deluxe-margin-left: -3em;
+  --banner-letter-spacing: 2px;
+}
+
+#intro {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  border-block: 2px solid var(--banner-new-color);
+}
+
+body {
+  background-color: var(--color-background-body);
+  margin-left: var(--body-margin);
+  margin-right: var(--body-margin);
+}
+
+h1 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading);
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: var(--font-family-heading);
+  letter-spacing: 1px;
+  margin-top: 2em;
+}
+
+h3 {
+  font-family: var(--font-family-heading);
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-family: var(--font-family-heading);
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: var(--font-family-paragraph);
+  font-size: var(--font-size-body);
+  letter-spacing: 1px;
+  line-height: 1.2em;
+}
+
+button {
+  border-radius: 10px;
+  background-color: var(--color-background-button-primary);
+  color: var(--color-text-color);
+  width: var(--width-button);
+  height: var(--height-button);
+  font-size: var(--font-size-buttons);
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: var(--color-background-button-hover);
+}
+
+button:active {
+  background-color: var(--color-background-button-pressed);
+}
+
+#knapper {
+  display: grid;
+}
+
+/* Customize the label (the container) */
+.container {
+  margin-top: 2em;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  border: 1px solid var(--color-background-button-primary);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--color-background-button-pressed);
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: var(--color-background-button-hover);
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--color-background-button-hover);
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[id="heart"] {
+  margin-top: 2em;
+  position: absolute;
+  left: -100vw;
+}
+[for="heart"] {
+  color: #aab8c2;
+  cursor: pointer;
+  font-size: 6em;
+  align-self: center;
+  transition: color 0.2s ease-in-out;
+}
+[for="heart"]:hover {
+  color: var(--color-background-button-pressed);
+}
+[for="heart"]::selection {
+  color: none;
+  background: transparent;
+}
+[for="heart"]::moz-selection {
+  color: none;
+  background: transparent;
+}
+[id="heart"]:checked + label {
+  color: var(--color-background-button-primary);
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+.nyproduceret {
+  width: var(--banner-width);
+  height: var(--banner-height);
+  background-color: var(--color-background-button-primary);
+  color: var(--banner-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: var(--banner-shape);
+  letter-spacing: var(--banner-letter-spacing);
+}
+
+.form .button {
+  color: white;
+}
+
+/* Style the search field */
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid var(--color-background-button-primary);
+  float: left;
+  width: 50%;
+  background: #f1f1f1;
+  background-size: auto;
+}
+
+/* Style the submit button */
+form.example button {
+  background-image: url(/search.png);
+  background-repeat: no-repeat;
+  justify-content: center;
+  float: left;
+  width: 20%;
+  padding: 20px;
+  background-color: var(--color-background-button-primary);
+  color: white;
+  font-size: 17px;
+  border: 1px solid var(--color-background-button-hover);
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border-radius: 0%;
+}
+form.example button:hover {
+  background: var(--color-background-button-hover);
+  background-image: url(/search.png);
+  background-repeat: no-repeat;
+}
+
+form.example button:active {
+  background: var(--color-background-button-pressed);
+  background-image: url(/search.png);
+  background-repeat: no-repeat;
+}
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#card {
+  margin-top: 2em;
+  background-color: var(--color-background-body);
+  border: 2px solid var(--color-background-button-hover);
+}
+
+.cardheader,
+.cardgalleri header {
+  padding: 1em;
+  background-color: var(--color-background-button-pressed);
+}
+
+.cardgrid {
+  padding-top: 2em;
+
+  display: grid;
+  grid-template-columns: 2fr 2fr 0.5fr;
+  gap: 2em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prisdetaljer h4 {
+  padding-inline: 1em;
+
+  background-color: var(--color-background-button-pressed);
+}
+
+.prisdetaljer p {
+  padding-inline: 1.5em;
+}
+
+.prisdetaljer {
+  background-color: var(--color-secondary);
+  text-align: center;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.deluxe {
+  width: var(--banner-width);
+  height: var(--banner-height);
+  background-color: var(--banner-deluxe-color);
+  box-shadow: var(--banner-shadow);
+  color: var(--banner-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: var(--banner-shape);
+  transform: var(--banner-deluxe-angle);
+  margin-top: var(--banner-deluxe-margin-top);
+  margin-left: var(--banner-deluxe-margin-left);
+  letter-spacing: var(--banner-letter-spacing);
+}
+
+.deluxe h3 {
+  color: var(--banner-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.alert {
+  color: var(--alert-color);
+}
+
+.cardheader {
+  display: grid;
+  grid-template-columns: 4fr 0.5fr;
+}
+
+.sidstechance {
+  width: var(--banner-width);
+  height: var(--banner-height);
+  background-color: var(--alert-color);
+  box-shadow: var(--banner-shadow);
+  color: var(--banner-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: var(--banner-shape);
+  margin-left: var(--banner-deluxe-margin-left);
+  letter-spacing: var(--banner-letter-spacing);
+}
+
+.sidstechance h3 {
+  color: var(--banner-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.cardgalleri {
+  margin-top: 2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 2px solid var(--color-background-button-hover);
+  list-style: none;
+  text-align: center;
+  background-color: #ffffff;
+}
+#produktbillede {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.galleriview {
+  margin-top: 20px;
+}
+
+.prisdetaljergalleri {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #f9f5ef;
+}
+
+.cardgalleri button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.produktinfogalleri {
+  margin: 2em;
+}
+
+.cardgalleri .nyproduceret {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vurderinggalleri {
+  background-color: #f9f5ef;
+  background-color: var(--color-background-button-pressed);
+}
+
+.deluxegalleri {
+  width: var(--banner-width);
+  height: var(--banner-height);
+  background-color: var(--banner-deluxe-color);
+  color: var(--banner-text-color);
+  clip-path: var(--banner-shape);
+  transform: var(--banner-deluxe-angle);
+  letter-spacing: var(--banner-letter-spacing);
+  left: -2em;
+  margin-top: var(--banner-deluxegalleri-margin-top);
+}
+
+.deluxegalleri {
+  text-align: center;
+  margin-left: 57%;
+  margin-top: -89%;
+}
+
+.iconbutton {
+  border-radius: 10px;
+  background-color: var(--color-background-button-primary);
+  color: var(--color-text-color);
+  width: var(--width-button);
+  height: var(--height-button);
+  font-size: var(--font-size-buttons);
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-top: 5px;
+  justify-content: center;
+}
+
+button img {
+  padding-top: -5px;
+}
+
+.produktinfogalleri .sidstechance {
+  margin-left: auto;
+  margin-right: auto;
+}
